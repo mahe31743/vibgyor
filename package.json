@@ -5,7 +5,10 @@
   "type": "module",
   "description": "VIBGYOR Education - 42 tools with Razorpay subscriptions",
   "scripts": {
-    "dev": "vercel dev",
-    "deploy": "vercel --prod"
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2"
   }
 }

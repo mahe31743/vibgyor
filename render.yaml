@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: mahes-kilo
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: OWNER_CODE
+        sync: false
+      - key: OWNER_NAME
+        value: MAHESWARI
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: VIBGYOR_SESSION_SECRET
+        sync: false
