@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VIBGYOR EDUCATION BY MAHESWARI VIJAYAKUMAR</title>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<style>
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{margin:0;background:#FFFDF8;padding:12px;color:#5A5A5A}
+.v{color:#B39DDB}.i{color:#9DB4D6}.b{color:#8FC1E3}.g{color:#8FD0A8}.y{color:#D9B64A}.o{color:#F5B895}.r{color:#F49AA8}
+.rainbow{background:linear-gradient(90deg,#E8DFF5,#D6E4F0,#D3EAF5,#D9F0E3,#FFF4D6,#FFE8D6,#FFDDE0);color:#5A5A5A;text-align:center;padding:12px;border-radius:14px;font-weight:900;border:1px solid #E8DFF5}
+.tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:10px 0;position:sticky;top:0;z-index:99;background:#FFFDF8;padding:5px 0}
+.tabs button{padding:14px 6px;border:0;border-radius:12px;font-weight:900;cursor:pointer;font-size:13px}
+.tabs button.active{background:linear-gradient(90deg,#E8DFF5,#D6E4F0,#D3EAF5,#D9F0E3,#FFF4D6,#FFE8D6,#FFDDE0);color:#5A5A5A;border:2px solid #B39DDB}
+.tabs button.inactive{background:#fff;color:#5A5A5A;border:1px solid #eee}
+.top{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.top button{padding:14px 6px;border:0;border-radius:14px;font-weight:900;cursor:pointer;background:#fff;box-shadow:0 2px 6px #0001;line-height:1.3;color:#5A5A5A;border:1px solid #eee;font-size:13px;min-height:62px}
+.top button:hover{filter:brightness(1.04)}
+input,select,textarea{width:100%;padding:13px;border:2px solid #D6E4F0;border-radius:12px;font-size:16px;margin:8px 0;background:#fff;color:#5A5A5A}
+.bigbtn{width:100%;background:linear-gradient(90deg,#E8DFF5,#D6E4F0,#D3EAF5,#D9F0E3,#FFF4D6,#FFE8D6,#FFDDE0);color:#5A5A5A;padding:15px;font-size:16px;border:1px solid #D6E4F0;border-radius:12px;font-weight:900;cursor:pointer}
+#out{background:#fff;border-radius:14px;padding:14px;margin-top:12px;line-height:1.6;font-size:14px;text-align:center;border:1px solid #eee}
+.cat{grid-column:1/-1;text-align:center;padding:9px;border-radius:8px;font-weight:900;margin-top:6px;border:1px solid #eee}
+.plan{background:#5A5A5A;color:#FFD700;text-align:center;padding:10px;border-radius:12px;font-weight:900;margin:10px 0}
+.plan.free{background:#8FD0A8;color:#fff}
+.plan.expired{background:#F49AA8;color:#fff}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.card{background:#fff;border:1px solid #eee;border-radius:14px;padding:14px;margin:8px 0}
+.price{border:2px solid #D6E4F0;border-radius:16px;padding:14px;margin:10px 0;text-align:center;background:#fff}
+.price.best{border:3px solid #F49AA8}
+.price b{font-size:26px;display:block;margin:4px 0}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:500;display:none;align-items:center;justify-content:center;padding:14px;overflow-y:auto}
+.modal.open{display:flex}
+.modal .box{background:#fff;border-radius:18px;padding:18px;max-width:440px;width:100%;margin:auto}
+.adm{background:#5A5A5A;color:#fff;border-radius:14px;padding:14px}
+.adm input{border-color:#FFD700}
+.adm b{color:#FFD700}
+.adm button{width:100%;padding:13px;border:0;border-radius:10px;font-weight:900;margin-top:6px;cursor:pointer}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.row>*{flex:1 1 120px}
+.small{font-size:12px;color:#888}
+@media(max-width:760px){.top{grid-template-columns:1fr 1fr}.tabs{grid-template-columns:1fr}}
+@media print{.noprint{display:none!important}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<div style="text-align:center;background:#fff;padding:14px;border-radius:16px;box-shadow:0 2px 10px #0001">
+  <div style="font-size:42px;font-weight:900"><span class="v">V</span><span class="i">I</span><span class="b">B</span><span class="g">G</span><span class="y">Y</span><span class="o">O</span><span class="r">R</span></div>
+  <div style="font-size:30px;font-weight:900;background:linear-gradient(90deg,#ff1744,#ff9100,#e5b800,#00c853,#00b0ff,#651fff,#ff00a8);background-clip:text;-webkit-background-clip:text;color:transparent">EDUCATION</div>
+  <div style="font-size:24px;line-height:.6">🌈</div>
+  <div style="font-size:13px;font-weight:900;margin-top:6px">BY MAHESWARI VIJAYAKUMAR D/O MR.&amp;MRS.KALYANI SOWRIRAJAN • Chennai, Tamil Nadu</div>
+  <div id="ownerBadge"></div>
+</div>
+
+<div class="rainbow" style="margin-top:10px">🌈 41 Tools • Every Tool Opens In A Clean Window • Easy Print • Easy Close • 100% Kids Safe 🌈</div>
+<div class="plan" id="planBar">Checking your plan…</div>
+
+<div class="tabs">
+  <button id="tabBtn1" class="active" onclick="showTab(1)">🏠 TAB 1 - 41 TOOLS</button>
+  <button id="tabBtn2" class="inactive" onclick="showTab(2)">⭐ TAB 2 - WORKING FEATURES</button>
+  <button id="tabBtn3" class="inactive" onclick="showTab(3)">💬 TAB 3 - FEEDBACK</button>
+</div>
+
+<div id="tab1">
+  <div id="premiumBanner"></div>
+  <button class="bigbtn" onclick="openPricing()">👑 GO PREMIUM - ₹399 / MONTH - RAZORPAY SECURE PAYMENT</button>
+  <div class="grid2" style="margin-top:8px">
+    <button class="bigbtn" style="background:#5A5A5A;color:#FFD700" onclick="openOwnerLogin()">👑 OWNER LOGIN</button>
+    <button class="bigbtn" style="font-size:13px;padding:12px" onclick="openCertificate()">⭐ CHILD SAFE CERTIFICATE</button>
+  </div>
+  <input id="searchBox" oninput="searchTool()" placeholder="🔍 Search Tool... Eg: Calculator / Quiz / Card">
+  <div class="top" style="margin-top:12px">
+    <div class="cat" style="background:#E8DFF5">💜 VIOLET - 1 to 8</div>
+    <button onclick="openTool('Moral Story')">📖 1. Moral Story 🪟</button>
+    <button onclick="openTool('MCQ')">✅ 2. MCQ Quiz 🪟</button>
+    <button onclick="openTool('PDF To Quiz')">📄 3. PDF To Quiz 🪟</button>
+    <button onclick="openTool('GK Quiz')">🌍 4. GK Quiz 🪟</button>
+    <button onclick="openTool('HTML Coding')">💻 5. HTML Coding 🪟</button>
+    <button onclick="openTool('Python Coding')">🐍 6. Python Coding 🪟</button>
+    <button onclick="openTool('Translate')">🔤 7. Translate 🪟</button>
+    <button onclick="openTool('Dictionary')">📕 8. Dictionary 🪟</button>
+    <div class="cat" style="background:#D6E4F0">💙 INDIGO - 9 to 14</div>
+    <button onclick="openTool('Resume Builder')">📄 9. Resume 🪟</button>
+    <button onclick="openTool('File Converter')">🔄 10. File Conv 🪟</button>
+    <button onclick="openTool('File Size Reducer')">📉 11. Reducer 🪟</button>
+    <button onclick="openTool('PDF Maker')">📑 12. PDF Maker 🪟</button>
+    <button onclick="openTool('QR Generator')">📷 13. QR Gen 🪟</button>
+    <button onclick="openTool('Password Generator')">🔐 14. Password 🪟</button>
+    <div class="cat" style="background:#D3EAF5">🔵 BLUE - 15 to 24</div>
+    <button onclick="openTool('Age Calculator')">🎂 15. Age Calc 🪟</button>
+    <button onclick="openTool('BMI Calculator')">⚖️ 16. BMI Calc 🪟</button>
+    <button onclick="openTool('EMI Calculator')">🏦 17. EMI Calc 🪟</button>
+    <button onclick="openTool('GST Calculator')">🧾 18. GST Calc 🪟</button>
+    <button onclick="openTool('Discount Calculator')">🏷️ 19. Discount 🪟</button>
+    <button onclick="openTool('Currency Converter')">💱 20. Currency 🪟</button>
+    <button onclick="openTool('Unit Converter')">📏 21. Unit Conv 🪟</button>
+    <button onclick="openTool('Word Counter')">🔢 22. Word Counter 🪟</button>
+    <button onclick="openTool('Calculator')">🧮 23. Calculator 🪟</button>
+    <button onclick="openTool('Percentage Calculator')">📊 24. % Calc 🪟</button>
+    <div class="cat" style="background:#D9F0E3">💚 GREEN - 25 to 31</div>
+    <button onclick="openTool('Love Calculator')">❤️ 25. Love Calc 🪟</button>
+    <button onclick="openTool('Joke')">😂 26. Joke - Kids Only 🪟</button>
+    <button onclick="openTool('Motivation')">💪 27. Motivation 🪟</button>
+    <button onclick="openTool('Lucky Number')">🍀 28. Lucky No 🪟</button>
+    <button onclick="openTool('Name Meaning')">✨ 29. Name Mean 🪟</button>
+    <button onclick="openTool('Horoscope')">🔮 30. Horoscope 🪟</button>
+    <button onclick="openTool('Toss')">🪙 31. Toss 🪟</button>
+    <div class="cat" style="background:#FFF4D6">💛 YELLOW - 32 to 39</div>
+    <button onclick="openTool('Bill Splitter')">💸 32. Bill Split 🪟</button>
+    <button onclick="openTool('Tip Calculator')">💰 33. Tip Calc 🪟</button>
+    <button onclick="openTool('Days Calculator')">📅 34. Days Calc 🪟</button>
+    <button onclick="openTool('Stopwatch')">⏱️ 35. Stopwatch 🪟</button>
+    <button onclick="openTool('Notes')">📝 36. Notes 🪟</button>
+    <button onclick="openTool('ToDo')">✅ 37. ToDo 🪟</button>
+    <button onclick="openTool('Expense Tracker')">💳 38. Expense 🪟</button>
+    <button onclick="openTool('Feedback')">⭐ 39. Feedback 🪟</button>
+    <div class="cat" style="background:#FFDDE0">❤️ RED - 40 to 41</div>
+    <button onclick="openTool('Visiting Card Maker')" style="grid-column:1/-1;background:#FFDDE0;border:2px solid #F49AA8">💳 40. Visiting Card Maker - 8 Lines 🪟</button>
+    <button onclick="openTool('Certificate')" style="grid-column:1/-1;background:#FFF4D6;border:2px solid #F2D492">⭐ 41. Child Safe Certificate 🪟</button>
+  </div>
+</div>
+
+<div id="tab2" style="display:none">
+  <div class="card">
+    <h2 style="margin-top:0">⭐ Working Features</h2>
+    <p class="small">These tools are fully working and tested. Tap any one to open it in a clean window.</p>
+  </div>
+  <div class="top" id="workingGrid"></div>
+</div>
+
+<div id="tab3" style="display:none">
+  <div class="card">
+    <h2 style="margin-top:0">💬 Feedback Survey</h2>
+    <p class="small">Total feedback: <b id="fbCount">0</b></p>
+    <b>Name</b><input id="fbName" placeholder="Your name (not Maheswari)">
+    <b>Plan</b>
+    <select id="fbPlan">
+      <option>Monthly - ₹399</option>
+      <option>6 Months - ₹1,599</option>
+      <option>1 Year - ₹2,599</option>
+      <option>Not Yet</option>
+    </select>
+    <b>Favourite Colour</b>
+    <select id="fbRating"><option>💜 Violet</option><option>💙 Indigo</option><option>🔵 Blue</option><option>💚 Green</option><option>💛 Yellow</option><option>🧡 Orange</option><option>❤️ Red</option><option>🌈 All 7</option></select>
+    <b>Liked Tool</b>
+    <select id="fbTool"><option>Moral Story</option><option>MCQ</option><option>PDF To Quiz</option><option>HTML Coding</option><option>Python Coding</option><option>Resume</option><option>Kids Joke</option><option>QR</option><option>Visiting Card Maker</option></select>
+    <b>New Tool Want</b><input id="fbNewTool" placeholder="Eg: Photo Editor">
+    <b>Suggestion</b><textarea id="fbMsg" placeholder="Suggestion..." style="height:80px"></textarea>
+    <button class="bigbtn" onclick="submitFeedback()">✅ SUBMIT FEEDBACK</button>
+    <div id="fbThanks"></div>
+    <button class="bigbtn" style="background:#5A5A5A;color:#fff;margin-top:8px" onclick="showAllFeedback()">📊 SEE ALL FEEDBACK</button>
+    <div id="fbList"></div>
+  </div>
+</div>
+
+<div style="font-size:12px;text-align:center;color:#888;margin-top:10px">
+  VIBGYOR v29.0 - 41 Tools - Razorpay Secured - Chennai, Tamil Nadu
+</div>
+
+<div class="modal" id="modal">
+  <div class="box" id="modalBox"></div>
+</div>
+
+<script>
+/* ============================ CONFIG ============================ */
+var RAZORPAY_KEY_ID = "rzp_live_Tzu9OGTrNEhlHP";          /* public key - safe in the page */
+var PAYMENT_LINK   = "https://razorpay.me/@maheswarisallinone"; /* backup payment link */
+var OWNER_NAME     = "MAHESWARI";
+var TRIAL_DAYS     = 7;
+
+var PLANS = {
+  monthly:    { amount: 39900,  days: 30,  label: "1 Month",  short: "₹399" },
+  six_months: { amount: 159900, days: 180, label: "6 Months", short: "₹1,599" },
+  yearly:     { amount: 259900, days: 365, label: "1 Year",   short: "₹2,599" }
+};
+
+/* ============================ STATE ============================ */
+function store(k, v){ try { localStorage.setItem(k, v); } catch(e){} }
+function read(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+function del(k){ try { localStorage.removeItem(k); } catch(e){} }
+
+/* The server is the only authority. What sits in localStorage is just a
+   cached signed token - editing it cannot grant access, because every
+   entitlement is signed with a secret that never reaches the browser. */
+var ENTITLEMENT = { owner: false, plan: "", expires_at: 0, trial_ends: 0, ready: false };
+
+function applyEntitlement(res){
+  ENTITLEMENT.owner      = !!(res && res.ok && res.owner);
+  ENTITLEMENT.plan       = (res && res.plan) || "";
+  ENTITLEMENT.expires_at = (res && res.expires_at) || 0;
+  ENTITLEMENT.trial_ends = (res && res.trial_ends) || 0;
+  ENTITLEMENT.ready      = true;
+  if (typeof refreshPlanBar === "function") refreshPlanBar();
+}
+
+function loadEntitlement(){
+  var token = read("vibgyor_token") || "";
+  fetch("/api/session", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ token: token })
+  }).then(function(r){ return r.json(); })
+    .then(applyEntitlement)
+    .catch(function(){
+      ENTITLEMENT.ready = true;
+      if (typeof refreshPlanBar === "function") refreshPlanBar();
+    });
+}
+
+function isOwner(){ return ENTITLEMENT.owner; }
+
+function trialEnd(){ return ENTITLEMENT.trial_ends; }
+
+function expiry(){ return ENTITLEMENT.expires_at; }
+
+function planStatus(){
+  if (!ENTITLEMENT.ready) return { state: "trial", text: "⏳ Checking access..." };
+  if (ENTITLEMENT.owner) return { state: "owner", text: "👑 OWNER - LIFETIME FREE - NO PAYMENT" };
+  var exp = ENTITLEMENT.expires_at;
+  if (exp) {
+    var left = exp - Date.now();
+    if (left <= 0) return { state: "expired", text: "🔒 PLAN EXPIRED - RENEW TO CONTINUE" };
+    var d = Math.ceil(left / 86400000);
+    return { state: "paid", text: "🌈 " + (ENTITLEMENT.plan || "PREMIUM") + " ACTIVE - " + d + " days left" };
+  }
+  if (ENTITLEMENT.trial_ends) {
+    var t = ENTITLEMENT.trial_ends - Date.now();
+    if (t <= 0) return { state: "expired", text: "🔒 FREE TRIAL OVER - TAP BELOW TO CONTINUE" };
+    return { state: "trial", text: "🎁 FREE TRIAL - " + Math.ceil(t / 86400000) + " days left" };
+  }
+  return { state: "expired", text: "🔒 TAP BELOW TO CONTINUE" };
+}
+
+function isLocked(){
+  if (!ENTITLEMENT.ready) return true;
+  if (ENTITLEMENT.owner) return false;
+  if (ENTITLEMENT.expires_at) return Date.now() > ENTITLEMENT.expires_at;
+  if (ENTITLEMENT.trial_ends) return Date.now() > ENTITLEMENT.trial_ends;
+  return true;
+}
+
+/* ============================ UI ============================ */
+function showTab(n){
+  [1,2,3].forEach(function(i){
+    document.getElementById("tab" + i).style.display = (i === n) ? "block" : "none";
+    var b = document.getElementById("tabBtn" + i);
+    b.className = (i === n) ? "active" : "inactive";
+  });
+  window.scrollTo(0, 0);
+}
+
+function openModal(html){
+  var m = document.getElementById("modal");
+  document.getElementById("modalBox").innerHTML = html;
+  m.classList.add("open");
+}
+function closeModal(){
+  document.getElementById("modal").classList.remove("open");
+}
+document.getElementById("modal").addEventListener("click", function(e){
+  if (e.target === this) closeModal();
+});
+
+function refreshPlanBar(){
+  var s = planStatus();
+  var bar = document.getElementById("planBar");
+  bar.className = "plan " + (s.state === "paid" || s.state === "owner" ? "free" : s.state === "expired" ? "expired" : "");
+  bar.textContent = s.text;
+  var badge = document.getElementById("ownerBadge");
+  badge.innerHTML = isOwner()
+    ? '<div style="background:#5A5A5A;color:#FFD700;padding:6px 12px;border-radius:20px;font-size:12px;font-weight:900;display:inline-block;margin-top:8px">👑 OWNER - VERIFIED - LIFETIME FREE</div>'
+    : "";
+  var banner = document.getElementById("premiumBanner");
+  if (s.state === "expired") {
+    banner.innerHTML = '<div style="background:#F49AA8;color:#fff;text-align:center;padding:12px;border-radius:12px;font-weight:900;margin:10px 0">🔒 Your access has ended. Renew for ₹399/month to use all 41 tools.</div>';
+  } else {
+    banner.innerHTML = "";
+  }
+}
+
+function searchTool(){
+  var q = document.getElementById("searchBox").value.toLowerCase();
+  document.querySelectorAll("#tab1 .top button").forEach(function(b){
+    b.style.display = (!q || b.innerText.toLowerCase().indexOf(q) !== -1) ? "block" : "none";
+  });
+  document.querySelectorAll("#tab1 .cat").forEach(function(c){
+    var next = c.nextElementSibling, visible = false;
+    while (next && !next.classList.contains("cat")) {
+      if (next.style.display !== "none") visible = true;
+      next = next.nextElementSibling;
+    }
+    c.style.display = visible ? "block" : "none";
+  });
+}
+
+/* ============================ TOOL WINDOW ============================ */
+function toolWindow(title, inner){
+  var w = window.open("", "_blank", "width=680,height=820");
+  if (!w) { alert("Please allow pop-ups for this site, then tap again."); return null; }
+  w.document.write(
+    '<!DOCTYPE html><html><head><meta charset="utf-8">' +
+    '<meta name="viewport" content="width=device-width,initial-scale=1">' +
+    '<title>' + title + ' - VIBGYOR</title><style>' +
+    '*{box-sizing:border-box;font-family:Arial}' +
+    'body{margin:0;padding:12px;background:#FFFDF8;color:#5A5A5A}' +
+    'input,select,textarea{width:100%;padding:12px;border:2px solid #D6E4F0;border-radius:12px;font-size:15px;margin:6px 0;background:#fff;color:#5A5A5A}' +
+    'button{cursor:pointer}.topbar{position:sticky;top:0;background:#5A5A5A;color:#fff;padding:10px;border-radius:12px;text-align:center;margin-bottom:12px}' +
+    '.topbar button{padding:9px 15px;border:0;border-radius:9px;font-weight:900;margin:3px}' +
+    '.card{background:#fff;padding:14px;border-radius:14px;border:1px solid #eee;margin:10px 0}' +
+    'h2{text-align:center;margin:6px 0 12px}.out{background:#FFFDF8;padding:12px;border-radius:10px;margin-top:10px;font-weight:900;white-space:pre-wrap}' +
+    '.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}' +
+    '@media print{.topbar{display:none}}' +
+    '</style></head><body>' +
+    '<div class="topbar">🌈 VIBGYOR - ' + title +
+    '<br><button onclick="window.print()" style="background:#8FD0A8;color:#fff">🖨️ PRINT</button>' +
+    '<button onclick="window.close()" style="background:#F49AA8;color:#fff">❌ CLOSE</button></div>' +
+    inner + '</body></html>'
+  );
+  w.document.close();
+  return w;
+}
+
+/* ---------- small helpers ---------- */
+function num(v){ var n = parseFloat(v); return isFinite(n) ? n : NaN; }
+function money(n){ return "₹" + (Math.round(n * 100) / 100).toFixed(2); }
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
+
+/* ============================ DATA ============================ */
+var STORIES = {
+  "Monkey & Crocodile": "🐒 Monkey on a jamun tree. Crocodile became his friend. The crocodile's wife wanted the monkey's heart. The monkey said: my heart is on the tree! When the crocodile turned back, the monkey jumped to safety.\n\n⭐ MORAL: Use your brain in danger.",
+  "Lion & Clever Rabbit": "🦁 The lion was hunting all the animals. A clever rabbit said: another lion is in the well! The lion looked in, saw his own reflection, jumped in and was gone.\n\n⭐ MORAL: Brain beats strength.",
+  "Blue Jackal": "🦊 A jackal fell into a blue drum and came out blue. The animals made him king. One night he howled like a jackal and the truth came out.\n\n⭐ MORAL: Always tell the truth.",
+  "Crow & Fox": "🐦 The crow had cheese. The fox said: you sing so sweetly! The crow opened its mouth and the cheese fell.\n\n⭐ MORAL: Do not believe fake praise.",
+  "Tortoise & Hare": "🐢 The hare ran fast and slept. The tortoise walked slowly and won.\n\n⭐ MORAL: Slow and steady wins the race.",
+  "Ant & Grasshopper": "🐜 The ant worked all summer. The grasshopper sang. In winter the ant shared food.\n\n⭐ MORAL: Work hard and help others.",
+  "Honest Woodcutter": "🪓 The woodcutter lost his iron axe in the river. The god offered gold and silver, he said no. The god gave him all three.\n\n⭐ MORAL: Honesty is the best policy.",
+  "Golden Hen": "🐔 The farmer had a hen that laid a golden egg every day. Greedy, he cut the hen and found nothing.\n\n⭐ MORAL: Do not be greedy.",
+  "Thirsty Crow": "🐦 A thirsty crow found a pot with little water. It dropped stones one by one and the water rose.\n\n⭐ MORAL: Where there is a will, there is a way.",
+  "Little Bunny": "🐰 The bunny shared its carrots. The friends shared back.\n\n⭐ MORAL: Sharing is caring."
+};
+
+var MCQ_BANK = [
+  {c:"🇮🇳 India", q:"Capital of India?", o:["New Delhi","Mumbai","Chennai","Kolkata"], a:0, f:"New Delhi."},
+  {c:"🇮🇳 India", q:"National animal of India?", o:["Tiger","Lion","Elephant","Monkey"], a:0, f:"Bengal Tiger."},
+  {c:"🇮🇳 India", q:"National bird?", o:["Peacock","Parrot","Crow","Owl"], a:0, f:"Peacock."},
+  {c:"🇮🇳 India", q:"National flower?", o:["Lotus","Rose","Jasmine","Sunflower"], a:0, f:"Lotus."},
+  {c:"🇮🇳 India", q:"Taj Mahal is in?", o:["Agra","Delhi","Jaipur","Mumbai"], a:0, f:"Agra."},
+  {c:"🇮🇳 India", q:"India got freedom in?", o:["1947","1950","1945","1857"], a:0, f:"15 August 1947."},
+  {c:"🇮🇳 India", q:"Capital of Tamil Nadu?", o:["Chennai","Madurai","Coimbatore","Trichy"], a:0, f:"Chennai."},
+  {c:"🇮🇳 India", q:"Pink City?", o:["Jaipur","Delhi","Agra","Mumbai"], a:0, f:"Jaipur."},
+  {c:"🌍 World", q:"Largest ocean?", o:["Pacific","Atlantic","Indian","Arctic"], a:0, f:"Pacific."},
+  {c:"🌍 World", q:"Tallest mountain?", o:["Mount Everest","K2","Kangchenjunga","Mont Blanc"], a:0, f:"Everest, 8848 m."},
+  {c:"🌍 World", q:"Red planet?", o:["Mars","Venus","Jupiter","Mercury"], a:0, f:"Mars."},
+  {c:"🌍 World", q:"How many continents?", o:["7","5","6","8"], a:0, f:"7 continents."},
+  {c:"🌍 World", q:"Great Wall is in?", o:["China","Japan","India","Korea"], a:0, f:"China."},
+  {c:"🌍 World", q:"How many colours in a rainbow?", o:["7","5","6","8"], a:0, f:"VIBGYOR = 7."},
+  {c:"🧮 Maths", q:"10 + 20 = ?", o:["30","20","40","10"], a:0, f:"30."},
+  {c:"🧮 Maths", q:"5 x 5 = ?", o:["25","20","30","15"], a:0, f:"25."},
+  {c:"🧮 Maths", q:"100 - 45 = ?", o:["55","45","65","50"], a:0, f:"55."},
+  {c:"🧮 Maths", q:"2 + 2 x 2 = ?", o:["6","8","4","10"], a:0, f:"Multiply first: 2 + 4 = 6."},
+  {c:"🧮 Maths", q:"9 x 9 = ?", o:["81","72","90","99"], a:0, f:"81."},
+  {c:"🧮 Maths", q:"Zeros in 1 lakh?", o:["5","4","6","3"], a:0, f:"1,00,000 has 5 zeros."},
+  {c:"🍎 Science", q:"Water formula?", o:["H2O","CO2","O2","NaCl"], a:0, f:"H2O."},
+  {c:"🍎 Science", q:"Spider legs?", o:["8","6","4","10"], a:0, f:"8 legs."},
+  {c:"🍎 Science", q:"Bees make?", o:["Honey","Milk","Silk","Butter"], a:0, f:"Honey."},
+  {c:"🍎 Science", q:"Fastest land animal?", o:["Cheetah","Lion","Horse","Tiger"], a:0, f:"Cheetah."},
+  {c:"🍎 Science", q:"Largest mammal?", o:["Blue Whale","Elephant","Hippo","Giraffe"], a:0, f:"Blue whale."},
+  {c:"🍎 Science", q:"Plants make food by?", o:["Photosynthesis","Respiration","Digestion","Sleep"], a:0, f:"Photosynthesis."},
+  {c:"📖 Tamil", q:"Thirukkural written by?", o:["Thiruvalluvar","Bharathiyar","Kamban","Avvaiyar"], a:0, f:"Thiruvalluvar."},
+  {c:"📖 Tamil", q:"Tamil dance?", o:["Bharatanatyam","Kathak","Odissi","Kuchipudi"], a:0, f:"Bharatanatyam."},
+  {c:"📖 Tamil", q:"Tamil New Year?", o:["Puthandu","Pongal","Diwali","Onam"], a:0, f:"Puthandu."},
+  {c:"😂 Fun", q:"What has keys but no doors?", o:["Piano","Lock","Car","Book"], a:0, f:"A piano."},
+  {c:"😂 Fun", q:"What has a face and two hands?", o:["Clock","Human","Robot","Mirror"], a:0, f:"A clock."},
+  {c:"😂 Fun", q:"Many teeth but cannot bite?", o:["Comb","Dog","Shark","Lion"], a:0, f:"A comb."},
+  {c:"😂 Fun", q:"Gets wetter as it dries?", o:["Towel","Cloth","Water","Soap"], a:0, f:"A towel."},
+  {c:"😂 Fun", q:"Which month has 28 days?", o:["All months","February only","January","December"], a:0, f:"All months have at least 28."},
+  {c:"😂 Fun", q:"1 kg cotton or 1 kg iron?", o:["Both same","Cotton","Iron","Cannot say"], a:0, f:"Both weigh 1 kg."}
+];
+
+var JOKES = [
+  "Why did the maths book look sad? It had too many problems! 🤣",
+  "What do you call a fish with no eyes? A fsh! 🐟",
+  "Why did the banana go to the doctor? It was not peeling well! 🍌",
+  "Why did the bicycle fall over? It was two-tired! 🚲",
+  "What do you call a bear with no teeth? A gummy bear! 🐻",
+  "Why did the teddy bear say no to dessert? It was stuffed! 🧸"
+];
+
+var MOTIVATION = [
+  "Never give up. You are stronger than you think! 💪",
+  "Try again. You can do it! ⭐",
+  "Small steps every day become big success. 🌈",
+  "You are a super star! 🏆",
+  "Mistakes mean you are learning. Keep going! 📚"
+];
+
+var DICTIONARY = {
+  apple: "Apple - a sweet fruit 🍎", mango: "Mango - king of fruits 🥭", water: "Water - we drink it 💧",
+  book: "Book - pages full of knowledge 📖", school: "School - place to learn 🏫", friend: "Friend - a person you like 🧑‍🤝‍🧑",
+  mother: "Mother - the first teacher 👩", father: "Father - a guide 👨", rainbow: "Rainbow - seven colours in the sky 🌈",
+  sun: "Sun - gives us light and heat ☀️", moon: "Moon - shines at night 🌙", star: "Star - twinkles at night ⭐"
+};
+
+/* ============================ PAYMENT ============================ */
+function openPricing(){
+  var html = '<h2 style="text-align:center;margin:0 0 6px">👑 VIBGYOR PREMIUM</h2>' +
+    '<p style="text-align:center;font-size:13px;color:#888;margin:0 0 10px">Secure payment by Razorpay • UPI / Card / Netbanking</p>';
+  Object.keys(PLANS).forEach(function(k){
+    var p = PLANS[k];
+    var best = (k === "yearly") ? " best" : "";
+    html += '<div class="price' + best + '">' +
+      '<b>' + p.short + '</b>' + p.label + ' access' +
+      (k === "monthly" ? '<div class="small">Full 41 tools, 1 month</div>' :
+       k === "six_months" ? '<div class="small">Save ₹395 • ₹267/month</div>' :
+       '<div class="small">Best value • ₹217/month</div>') +
+      '<button class="bigbtn" style="margin-top:8px;background:#B39DDB;color:#fff" onclick="startPayment(\'' + k + '\')">' +
+      'PAY ' + p.short + ' - ' + p.label + '</button></div>';
+  });
+  html += '<p class="small" style="text-align:center">Owner? Use the owner code - no payment needed.</p>' +
+    '<button class="bigbtn" style="background:#5A5A5A;color:#FFD700" onclick="closeModal();openOwnerLogin()">👑 OWNER LOGIN</button>' +
+    '<button class="bigbtn" style="background:#eee;color:#888;margin-top:6px" onclick="closeModal()">CLOSE</button>';
+  openModal(html);
+}
+
+function startPayment(planKey){
+  var plan = PLANS[planKey];
+  if (!plan) return;
+  if (isOwner()) { alert("👑 Owner - no payment needed."); return; }
+
+  openModal(
+    '<h2 style="text-align:center;margin:0 0 6px">PAY ' + plan.short + '</h2>' +
+    '<p style="text-align:center;font-size:13px">' + plan.label + ' access • all 41 tools</p>' +
+    '<div class="card" style="text-align:center">' +
+    '<div class="small">Step 1</div><b>Tap the button below and pay ' + plan.short + '</b>' +
+    '<button class="bigbtn" style="background:#B39DDB;color:#fff;margin-top:8px" onclick="openRazorpay(\'' + planKey + '\')">💳 PAY ' + plan.short + ' SECURELY</button>' +
+    '<button class="bigbtn" style="background:#fff;color:#5A5A5A;border:2px solid #8FC1E3;margin-top:6px" onclick="openPaymentLink()">🔗 PAY BY RAZORPAY LINK</button>' +
+    '<div class="small" style="margin-top:10px">Paid by Razorpay link? Send your payment ID to the owner to activate.</div>' +
+    '</div>' +
+    '<button class="bigbtn" style="background:#eee;color:#888" onclick="closeModal()">CLOSE</button>'
+  );
+}
+
+function openPaymentLink(){
+  window.open(PAYMENT_LINK, "_blank");
+}
+
+function openRazorpay(planKey){
+  var plan = PLANS[planKey];
+
+  /* Ask the server for a Razorpay order id. The server decides the amount,
+     so nobody can pay ₹1 and unlock a year. */
+  fetch("/api/create-order", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ plan: planKey })
+  }).then(function(r){ return r.json(); }).then(function(order){
+    if (order && order.order_id) { launchCheckout(plan, order); return; }
+    launchCheckout(plan, null);
+  }).catch(function(){
+    launchCheckout(plan, null);
+  });
+}
+
+function launchCheckout(plan, order){
+  if (typeof Razorpay === "undefined") { openPaymentLink(); return; }
+
+  var options = {
+    key: RAZORPAY_KEY_ID,
+    amount: order ? order.amount : plan.amount,
+    currency: "INR",
+    name: "VIBGYOR EDUCATION",
+    description: plan.label + " subscription",
+    image: "",
+    prefill: { name: "", email: "", contact: "" },
+    notes: { plan: plan.label },
+    theme: { color: "#B39DDB" },
+    modal: { ondismiss: function(){ /* customer closed the box */ } },
+    handler: function(response){
+      verifyPayment(response, plan);
+    }
+  };
+  if (order && order.order_id) options.order_id = order.order_id;
+
+  var rzp = new Razorpay(options);
+  rzp.on("payment.failed", function(resp){
+    alert("Payment failed: " + ((resp && resp.error && resp.error.description) || "please try again"));
+  });
+  rzp.open();
+}
+
+function verifyPayment(response, plan){
+  fetch("/api/verify-payment", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      razorpay_order_id: response.razorpay_order_id,
+      razorpay_payment_id: response.razorpay_payment_id,
+      razorpay_signature: response.razorpay_signature,
+      plan: planKeyOf(plan)
+    })
+  }).then(function(r){ return r.json(); }).then(function(res){
+    if (res && res.verified) {
+      activatePlan(plan, res.payment_id, res.token);
+    } else {
+      paymentUnavailable("This payment could not be verified. If money left your account, contact support with this payment id:", response.razorpay_payment_id);
+    }
+  }).catch(function(){
+    paymentUnavailable("Could not reach the payment server. If money left your account, contact support with this payment id:", response.razorpay_payment_id);
+  });
+}
+
+function planKeyOf(plan){
+  var keys = Object.keys(PLANS);
+  for (var i = 0; i < keys.length; i++) if (PLANS[keys[i]] === plan) return keys[i];
+  return "monthly";
+}
+
+function activatePlan(plan, paymentId, token){
+  if (token) store("vibgyor_token", token);
+  ENTITLEMENT.owner      = false;
+  ENTITLEMENT.plan       = plan.label.toUpperCase();
+  ENTITLEMENT.expires_at = Date.now() + plan.days * 86400000;
+  ENTITLEMENT.ready      = true;
+  closeModal();
+  refreshPlanBar();
+  alert("✅ " + plan.label + " activated. Thank you!\nPayment ref: " + (paymentId || "n/a"));
+  showSurvey(plan.label, paymentId);
+}
+
+function confirmPaid(planKey){
+  /* No free unlock: the only way in is a server-verified Razorpay payment. */
+  if (isOwner()) { alert("👑 Owner - no payment needed."); return; }
+  var plan = PLANS[planKey];
+  if (!plan) return;
+  openRazorpay(planKey);
+}
+
+function paymentUnavailable(msg, paymentId){
+  alert("❌ " + msg + "\n\n" + (paymentId || "no reference"));
+}
+
+/* ============================ OWNER ============================ */
+function openOwnerLogin(){
+  openModal(
+    '<div class="adm">' +
+    '<h2 style="text-align:center;margin:0;color:#FFD700">👑 OWNER LOGIN</h2>' +
+    '<p style="text-align:center;font-size:12px;color:#ddd">Owner gets lifetime free access - no subscription fee.</p>' +
+    '<b>Owner name</b><input id="ownerName" placeholder="MAHESWARI">' +
+    '<b>Secret code</b><input id="ownerCode" type="password" placeholder="Enter owner secret code">' +
+    '<button style="background:#FFD700;color:#000" onclick="verifyOwner()">🔓 UNLOCK OWNER MODE</button>' +
+    '<button style="background:#333;color:#fff" onclick="closeModal()">CANCEL</button>' +
+    '</div>'
+  );
+}
+
+function verifyOwner(){
+  var name = (document.getElementById("ownerName").value || "").trim().toUpperCase();
+  var code = (document.getElementById("ownerCode").value || "").trim();
+
+  /* The code is checked on the server, so it is never readable in page source. */
+  fetch("/api/owner-login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name: name, code: code })
+  }).then(function(r){ return r.json(); })
+    .then(function(res){
+      if (res && res.ok && res.token) {
+        store("vibgyor_token", res.token);
+        ENTITLEMENT.owner = true;
+        ENTITLEMENT.ready = true;
+        closeModal();
+        refreshPlanBar();
+        alert("✅ Welcome Owner! Lifetime free access - no subscription fee.");
+        openOwnerPanel();
+      } else {
+        alert("❌ " + ((res && res.error) || "Wrong owner name or code."));
+      }
+    })
+    .catch(function(){
+      alert("❌ Could not reach the server. Check your connection and try again.");
+    });
+}
+
+function openOwnerPanel(){
+  var feedback = JSON.parse(read("vibgyor_feedback") || "[]");
+  var paid = JSON.parse(read("vibgyor_payments") || "[]");
+  var total = paid.length;
+
+  var html = '<div class="adm">' +
+    '<h2 style="text-align:center;margin:0;color:#FFD700">👑 OWNER PANEL</h2>' +
+    '<p style="text-align:center;font-size:12px;color:#ddd">Owner: ' + OWNER_NAME + ' • Lifetime free</p>' +
+    '<div class="card" style="background:#fff;color:#5A5A5A">' +
+    '<b>Subscription payments recorded:</b> ' + total +
+    '<br><b>Feedback entries:</b> ' + feedback.length +
+    '<br><b>Plan:</b> ' + esc(read("vibgyor_plan") || "-") +
+    '</div>' +
+    '<div class="card" style="background:#fff;color:#5A5A5A;max-height:240px;overflow:auto">' +
+    (feedback.length ? feedback.slice(-20).reverse().map(function(f){
+      return '<div style="border-bottom:1px solid #eee;padding:6px 0;font-size:13px">' +
+        '<b>' + esc(f.name) + '</b> • ' + esc(f.plan) + '<br>' + esc(f.msg || "") + '</div>';
+    }).join("") : '<span class="small">No feedback yet.</span>') +
+    '</div>' +
+    '<button style="background:#25D366;color:#fff" onclick="exportSurvey()">📤 EXPORT SURVEY</button>' +
+    '<button style="background:#F49AA8;color:#fff" onclick="closeModal()">CLOSE</button>' +
+    '<button style="background:#333;color:#fff" onclick="ownerLogout()">🔒 LOGOUT OWNER</button>' +
+    '</div>';
+  openModal(html);
+}
+
+function exportSurvey(){
+  var data = {
+    payments: JSON.parse(read("vibgyor_payments") || "[]"),
+    feedback: JSON.parse(read("vibgyor_feedback") || "[]"),
+    exported: new Date().toISOString()
+  };
+  var text = JSON.stringify(data, null, 2);
+  var blob = new Blob([text], { type: "application/json" });
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "vibgyor-survey.json";
+  a.click();
+}
+
+function ownerLogout(){
+  if (!confirm("Logout owner mode?")) return;
+  del("vibgyor_is_owner");
+  del("vibgyor_plan");
+  closeModal();
+  refreshPlanBar();
+}
+
+/* ============================ SURVEY ============================ */
+function showSurvey(planLabel, paymentId){
+  var html = '<h2 style="text-align:center;margin:0">🎉 Thank You!</h2>' +
+    '<p style="text-align:center;font-size:13px;color:#888">30-second survey - get 1 week extra free!</p>' +
+    '<div class="card" style="text-align:center;font-size:13px"><b>Plan:</b> ' + esc(planLabel || "-") +
+    '<br><b>Payment ref:</b> ' + esc(paymentId || "-") + '</div>' +
+    '<b>Why did you buy VIBGYOR?</b><select id="svWhy"><option>For my kids - learning</option><option>For school / homework</option><option>For business - visiting card</option><option>For coding - HTML / Python</option><option>For PDF to quiz</option><option>Other</option></select>' +
+    '<b>How did you hear about us?</b><select id="svHow"><option>WhatsApp</option><option>Friend / family</option><option>School / teacher</option><option>Facebook / Instagram</option><option>Google search</option><option>Other</option></select>' +
+    '<b>Rate VIBGYOR</b><select id="svRate"><option>5 stars - excellent</option><option>4 stars - very good</option><option>3 stars - good</option><option>2 stars - okay</option><option>1 star - need improve</option></select>' +
+    '<b>WhatsApp number (optional)</b><input id="svPhone" placeholder="For 1 week extra free">' +
+    '<b>Suggestion</b><textarea id="svMsg" style="height:70px" placeholder="Any suggestion?"></textarea>' +
+    '<button class="bigbtn" onclick="submitSurvey(\'' + esc(planLabel || "") + '\',\'' + esc(paymentId || "") + '\')">✅ SUBMIT SURVEY</button>' +
+    '<button class="bigbtn" style="background:#eee;color:#888" onclick="closeModal()">SKIP</button>';
+  openModal(html);
+}
+
+function submitSurvey(planLabel, paymentId){
+  var all = JSON.parse(read("vibgyor_feedback") || "[]");
+  all.push({
+    name: "Customer",
+    plan: planLabel,
+    why: document.getElementById("svWhy").value,
+    how: document.getElementById("svHow").value,
+    rate: document.getElementById("svRate").value,
+    phone: document.getElementById("svPhone").value,
+    msg: document.getElementById("svMsg").value,
+    payment: paymentId,
+    date: new Date().toLocaleString("en-IN")
+  });
+  store("vibgyor_feedback", JSON.stringify(all));
+
+  var pay = JSON.parse(read("vibgyor_payments") || "[]");
+  if (paymentId) { pay.push({ plan: planLabel, ref: paymentId, date: new Date().toLocaleString("en-IN") }); store("vibgyor_payments", JSON.stringify(pay)); }
+
+  /* bonus week */
+  var exp = expiry() || Date.now();
+  store("vibgyor_expiry", String(exp + 7 * 86400000));
+
+  closeModal();
+  refreshPlanBar();
+  updateFbCount();
+  alert("🙏 Thank you! 1 week extra free added.");
+}
+
+/* ============================ FEEDBACK ============================ */
+function submitFeedback(){
+  var name = (document.getElementById("fbName").value || "").trim();
+  if (name.toUpperCase() === OWNER_NAME) { alert("Please use your own name, not the owner name."); return; }
+  var all = JSON.parse(read("vibgyor_feedback") || "[]");
+  all.push({
+    name: name || "Friend",
+    plan: document.getElementById("fbPlan").value,
+    rating: document.getElementById("fbRating").value,
+    tool: document.getElementById("fbTool").value,
+    newTool: document.getElementById("fbNewTool").value,
+    msg: document.getElementById("fbMsg").value,
+    date: new Date().toLocaleString("en-IN")
+  });
+  store("vibgyor_feedback", JSON.stringify(all));
+  document.getElementById("fbThanks").innerHTML = '<div class="card" style="background:#D9F0E3">🙏 Thank you!</div>';
+  document.getElementById("fbMsg").value = "";
+  updateFbCount();
+}
+
+function updateFbCount(){
+  var all = JSON.parse(read("vibgyor_feedback") || "[]");
+  var el = document.getElementById("fbCount");
+  if (el) el.textContent = String(all.length);
+}
+
+function showAllFeedback(){
+  var all = JSON.parse(read("vibgyor_feedback") || "[]");
+  var box = document.getElementById("fbList");
+  if (!all.length) { box.innerHTML = '<p class="small">No feedback yet.</p>'; return; }
+  box.innerHTML = all.slice().reverse().map(function(f){
+    return '<div class="card"><b>' + esc(f.name) + '</b> • <span class="small">' + esc(f.date || "") + '</span>' +
+      '<br>Plan: ' + esc(f.plan || "") + '<br>Colour: ' + esc(f.rating || "") +
+      '<br>Liked: ' + esc(f.tool || "") + '<br>Want: ' + esc(f.newTool || "") +
+      (f.msg ? '<br>Message: ' + esc(f.msg) : '') + '</div>';
+  }).join("");
+}
+
+/* ============================ TOOLS ============================ */
+function openTool(name){
+  if (isLocked()) { openPricing(); return; }
+
+  switch (name) {
+    case "Moral Story": return toolStory();
+    case "MCQ": return toolMCQ("all");
+    case "GK Quiz": return toolMCQ("gk");
+    case "PDF To Quiz": return toolPDFQuiz();
+    case "HTML Coding": return toolHTML();
+    case "Python Coding": return toolPython();
+    case "Translate": return toolTranslate();
+    case "Dictionary": return toolDictionary();
+    case "Resume Builder": return toolResume();
+    case "File Converter": return toolFileConvert();
+    case "File Size Reducer": return toolReduce();
+    case "PDF Maker": return toolPdfMaker();
+    case "QR Generator": return toolQR();
+    case "Password Generator": return toolPassword();
+    case "Age Calculator": return toolAge();
+    case "BMI Calculator": return toolBMI();
+    case "EMI Calculator": return toolEMI();
+    case "GST Calculator": return toolGST();
+    case "Discount Calculator": return toolDiscount();
+    case "Currency Converter": return toolCurrency();
+    case "Unit Converter": return toolUnits();
+    case "Word Counter": return toolWords();
+    case "Calculator": return toolCalculator();
+    case "Percentage Calculator": return toolPercent();
+    case "Love Calculator": return toolLove();
+    case "Joke": return toolJoke();
+    case "Motivation": return toolMotivation();
+    case "Lucky Number": return toolLucky();
+    case "Name Meaning": return toolNameMeaning();
+    case "Horoscope": return toolHoroscope();
+    case "Toss": return toolToss();
+    case "Bill Splitter": return toolBill();
+    case "Tip Calculator": return toolTip();
+    case "Days Calculator": return toolDays();
+    case "Stopwatch": return toolStopwatch();
+    case "Notes": return toolNotes();
+    case "ToDo": return toolTodo();
+    case "Expense Tracker": return toolExpense();
+    case "Feedback": return toolFeedback();
+    case "Visiting Card Maker": return toolCard();
+    case "Certificate": return openCertificate();
+    default: return toolGeneric(name);
+  }
+}
+
+function field(label, id, type, value, placeholder){
+  return '<b style="font-size:13px">' + label + '</b><input id="' + id + '" type="' + (type || "text") + '"' +
+    (value !== undefined ? ' value="' + esc(value) + '"' : '') +
+    (placeholder ? ' placeholder="' + esc(placeholder) + '"' : '') + '>';
+}
+function outBox(id){ return '<div class="out" id="' + id + '">—</div>'; }
+function goButton(label, code){
+  return '<button class="bigbtn" style="background:#B39DDB;color:#fff;margin-top:8px" onclick="' + code + '">' + label + '</button>';
+}
+
+/* --- stories --- */
+function toolStory(){
+  var w = toolWindow("Moral Story",
+    '<h2>📖 Moral Stories</h2><p style="text-align:center;color:#888;font-size:13px">Tap a story - it shows here.</p>' +
+    '<div class="grid" id="sb"></div><div class="out" id="so">👆 Tap a story</div>');
+  if (!w) return;
+  var html = "";
+  Object.keys(STORIES).forEach(function(k){
+    html += '<button style="padding:12px;border:0;border-radius:10px;background:#B39DDB;color:#fff;font-weight:900" ' +
+      'onclick="document.getElementById(\'so\').innerText=STORIES[' + JSON.stringify(k) + ']">' + esc(k) + '</button>';
+  });
+  w.STORIES = STORIES;
+  w.document.getElementById("sb").innerHTML = html;
+}
+
+/* --- MCQ --- */
+function toolMCQ(scope){
+  var bank = MCQ_BANK.filter(function(q){
+    if (scope === "gk") return q.c.indexOf("India") === 0 || q.c.indexOf("World") === 0;
+    return true;
+  }).sort(function(){ return Math.random() - 0.5; }).slice(0, 20);
+
+  var w = toolWindow("MCQ Quiz", '<h2>✅ MCQ Quiz</h2><div id="qz"></div>');
+  if (!w) return;
+
+  var script = '<script>(function(){' +
+    'var bank=' + JSON.stringify(bank) + ';' +
+    'var i=0,score=0,answered=false;' +
+    'function render(){' +
+      'if(i>=bank.length){document.getElementById("qz").innerHTML="<h2>Finished!</h2><div class=out>Score: "+score+" / "+bank.length+"</div>";return;}' +
+      'answered=false;var q=bank[i];var h="<div class=out>Question "+(i+1)+" / "+bank.length+" • "+q.c+" • Score "+score+"</div><h3>"+q.q+"</h3>";' +
+      'q.o.forEach(function(o,k){h+="<button onclick=\\"ans("+k+")\\" style=\\"width:100%;padding:12px;margin:5px 0;border:2px solid #D6E4F0;border-radius:12px;background:#fff;text-align:left;font-weight:700\\">"+String.fromCharCode(65+k)+". "+o+"</button>";});' +
+      'h+="<div id=res></div>";document.getElementById("qz").innerHTML=h;}' +
+    'function ans(k){if(answered)return;answered=true;var q=bank[i];var ok=(k===q.a);if(ok)score++;' +
+      'document.getElementById("res").innerHTML="<div class=out style=\\"background:"+(ok?"#D9F0E3":"#FFDDE0")+"\\">"+(ok?"✅ Correct! ":"❌ Wrong. Answer: "+q.o[q.a]+"<br>")+q.f+"</div>"' +
+      '"<button onclick=\\"i++;render()\\" style=\\"width:100%;padding:12px;margin-top:8px;border:0;border-radius:12px;background:#8FC1E3;color:#fff;font-weight:900\\">NEXT</button>";}' +
+    'render();' +
+  '})();<\/script>';
+  w.document.write(script);
+}
+
+/* --- PDF to quiz --- */
+function toolPDFQuiz(){
+  var w = toolWindow("PDF To Quiz",
+    '<h2>📄 PDF To Quiz</h2>' +
+    '<input type="file" id="f" accept="application/pdf,.txt">' +
+    '<textarea id="t" style="height:110px" placeholder="Or paste text here"></textarea>' +
+    goButton("🎯 MAKE QUIZ", "makeQ()") +
+    '<div id="res"></div>');
+  if (!w) return;
+
+  w.document.write('<scr' + 'ipt>' +
+    'function makeQ(){var t=document.getElementById("t").value.trim();' +
+      'if(t.length<40){document.getElementById("res").innerHTML="<div class=out>Paste at least a few lines.</div>";return;}' +
+      'var sents=t.replace(/\\s+/g," ").split(/(?<=[.!?]) /).filter(function(s){return s.length>30&&s.length<220;});' +
+      'var qs=[];sents.forEach(function(s){var w=s.split(" ");' +
+        'var cand=[];w.forEach(function(x,y){var c=x.replace(/[^A-Za-z0-9]/g,"");if(c.length>4)cand.push({w:c,i:y});});' +
+        'if(!cand.length)return;var pick=cand[Math.floor(Math.random()*cand.length)];' +
+        'var wrong=[];w.forEach(function(x){var c=x.replace(/[^A-Za-z0-9]/g,"");if(c.length>4&&c!==pick.w&&wrong.indexOf(c)===-1)wrong.push(c);});' +
+        'wrong=wrong.sort(function(){return Math.random()-0.5;}).slice(0,3);' +
+        'if(wrong.length<3)return;' +
+        'var opts=[pick.w].concat(wrong).sort(function(){return Math.random()-0.5;});' +
+        'var text=w.slice(0,pick.i).join(" ")+" ___ "+w.slice(pick.i+1).join(" ");' +
+        'qs.push({q:text,o:opts,a:opts.indexOf(pick.w)});});' +
+      'window.QS=qs.slice(0,15);var i=0,score=0,answered=false;' +
+      'function render(){if(i>=window.QS.length){document.getElementById("res").innerHTML="<div class=out>Score: "+score+" / "+window.QS.length+"</div>";return;}' +
+        'answered=false;var q=window.QS[i];var h="<div class=out>Question "+(i+1)+" / "+window.QS.length+"</div><h3>"+q.q+"</h3>";' +
+        'q.o.forEach(function(o,k){h+="<button onclick=\\"ans("+k+")\\" style=\\"width:100%;padding:11px;margin:4px 0;border:2px solid #D6E4F0;border-radius:10px;background:#fff;text-align:left\\">"+String.fromCharCode(65+k)+". "+o+"</button>";});' +
+        'h+="<div id=r></div>";document.getElementById("res").innerHTML=h;}' +
+      'function ans(k){if(answered)return;answered=true;var q=window.QS[i];var ok=(k===q.a);if(ok)score++;' +
+        'document.getElementById("r").innerHTML="<div class=out style=\\"background:"+(ok?"#D9F0E3":"#FFDDE0")+"\\">"+(ok?"✅ Correct!":"❌ Answer: "+q.o[q.a])+"</div>"' +
+        '"<button onclick=\\"i++;render()\\" style=\\"width:100%;padding:11px;margin-top:6px;border:0;border-radius:10px;background:#8FC1E3;color:#fff;font-weight:900\\">NEXT</button>";}' +
+      'render();}' +
+    'document.getElementById("f").addEventListener("change",function(e){var f=e.target.files[0];if(!f)return;' +
+      'if(/\\.txt$/i.test(f.name)){f.text().then(function(x){document.getElementById("t").value=x;});return;}' +
+      'if(!window.pdfjsLib){document.getElementById("res").innerHTML="<div class=out>PDF library not loaded. Paste the text instead.</div>";return;}' +
+      'var rd=new FileReader();rd.onload=function(){pdfjsLib.getDocument({data:new Uint8Array(rd.result)}).promise.then(function(pdf){' +
+        'var chain=Promise.resolve("");for(var p=1;p<=pdf.numPages;p++){chain=chain.then(function(){return pdf.getPage(p);}).then(function(pg){return pg.getTextContent();}).then(function(tc){' +
+        'return tc.items.map(function(it){return it.str;}).join(" ");});}' +
+        'chain.then(function(txt){document.getElementById("t").value=txt;});});};rd.readAsArrayBuffer(f);});' +
+    '<\/scr' + 'ipt>');
+  if (w) w.document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"><\/script>');
+}
+
+/* --- HTML editor --- */
+function toolHTML(){
+  var w = toolWindow("HTML Coding",
+    '<h2>💻 HTML Coding</h2>' +
+    '<textarea id="c" style="height:200px;font-family:monospace;background:#111;color:#0F0">' +
+    '&lt;h1 style="color:#B39DDB"&gt;Hello VIBGYOR!&lt;/h1&gt;\n&lt;p&gt;I love rainbows!&lt;/p&gt;</textarea>' +
+    goButton("🚀 RUN - OPEN MY PAGE", "run()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function run(){var c=document.getElementById("c").value;' +
+    'var p=window.open("","_blank","width=700,height=800");' +
+    'p.document.write("<html><head><meta charset=utf-8><meta name=viewport content=width=device-width,initial-scale=1><title>My Page</title></head><body style=padding:16px;font-family:Arial>"+c+"</body></html>");' +
+    'p.document.close();document.getElementById("r").innerHTML="<div class=out>✅ Opened in a new page.</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- Python editor (tiny interpreter) --- */
+function toolPython(){
+  var w = toolWindow("Python Coding",
+    '<h2>🐍 Python Coding</h2>' +
+    '<textarea id="c" style="height:200px;font-family:monospace;background:#111;color:#0F0">' +
+    'print("Hello VIBGYOR")\nname = "Maheswari"\nprint(name)\na = 10\nb = 20\nprint(a + b)\n' +
+    'for colour in ["Violet","Indigo","Blue","Green","Yellow","Orange","Red"]:\n    print(colour)</textarea>' +
+    goButton("🚀 RUN", "run()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>' +
+    'function run(){var lines=document.getElementById("c").value.split("\\n");var vars={};var out=[];' +
+    'lines.forEach(function(raw){var line=raw.trim();if(!line||line.indexOf("#")===0)return;' +
+      'if(line.indexOf("print(")===0&&line.slice(-1)===")"){var ins=line.slice(6,-1).trim();' +
+        'if(ins.charAt(0)===\'"\'||ins.charAt(0)==="\u0027"){out.push(ins.slice(1,-1));return;}' +
+        'if(ins.indexOf("+")>-1){var j="";ins.split("+").forEach(function(p){p=p.trim();' +
+          'if(p.charAt(0)===\'"\'||p.charAt(0)==="\u0027")j+=p.slice(1,-1);else if(vars[p]!==undefined)j+=vars[p];else if(!isNaN(p))j+=p;});out.push(j);return;}' +
+        'if(vars[ins]!==undefined){out.push(vars[ins]);return;}if(!isNaN(ins)){out.push(ins);return;}out.push(ins);return;}' +
+      'if(line.indexOf("=")>-1&&line.indexOf("==")===-1){var p=line.split("=");var k=p[0].trim();var v=p.slice(1).join("=").trim();' +
+        'v=v.replace(/^["\']|["\']$/g,"");vars[k]=isNaN(v)?v:Number(v);return;}' +
+      'if(line.indexOf("for ")===-1)return;' +
+      'var m=line.match(/in \\[(.*)\\]/);if(m){m[1].split(",").forEach(function(x){out.push(x.trim().replace(/^["\']|["\']$/g,""));});return;}' +
+      'var r=line.match(/range\\((\\d+)\\)/);if(r){for(var i=0;i<parseInt(r[1]);i++)out.push(i);}' +
+    '});' +
+    'document.getElementById("r").innerHTML="<div class=out style=\\"background:#111;color:#0F0;text-align:left\\">"+(out.join("\\n")||"(no output)")+"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- translate --- */
+function toolTranslate(){
+  var dict = {
+    "hello":"नमस्ते","hi":"नमस्ते","thank you":"धन्यवाद","good morning":"सुप्रभात","good night":"शुभ रात्रि",
+    "water":"पानी","food":"खाना","home":"घर","school":"विद्यालय","book":"किताब","friend":"दोस्त",
+    "mother":"माँ","father":"पिता","apple":"सेब","mango":"आम","how are you":"आप कैसे हैं","i am fine":"मैं ठीक हूँ",
+    "what is your name":"आपका नाम क्या है","goodbye":"अलविदा","yes":"हाँ","no":"नहीं","cat":"बिल्ली","dog":"कुत्ता"
+  };
+  var w = toolWindow("Translate",
+    '<h2>🔤 Translate - English ↔ Hindi</h2>' +
+    '<select id="d"><option value="eh">English → Hindi</option><option value="he">Hindi → English</option></select>' +
+    '<textarea id="t" style="height:90px" placeholder="Type a word or sentence"></textarea>' +
+    goButton("🔁 TRANSLATE", "go()") + '<div id="r"></div>' +
+    '<p style="font-size:12px;color:#888">Works offline with a built-in phrase dictionary. Unknown words are shown in brackets.</p>');
+  if (!w) return;
+  w.DICT = dict;
+  w.document.write('<scr' + 'ipt>var DICT=' + JSON.stringify(dict) + ';' +
+    'function go(){var dir=document.getElementById("d").value;var t=document.getElementById("t").value.trim();' +
+      'if(!t){return;}var lower=t.toLowerCase();' +
+      'if(dir==="eh"&&DICT[lower]){document.getElementById("r").innerHTML="<div class=out>"+DICT[lower]+"</div>";return;}' +
+      'var rev={};Object.keys(DICT).forEach(function(k){rev[DICT[k]]=k;});' +
+      'if(dir==="he"&&rev[lower]){document.getElementById("r").innerHTML="<div class=out>"+rev[lower]+"</div>";return;}' +
+      'var map=dir==="eh"?DICT:rev;' +
+      'var res=t.split(/(\\s+)/).map(function(x){var k=x.toLowerCase().replace(/[.,!?;:]+$/,"");' +
+        'if(map[k])return x.replace(new RegExp(k,"i"),map[k]);return "[ "+x+" ]";}).join("");' +
+      'document.getElementById("r").innerHTML="<div class=out>"+res+"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- dictionary --- */
+function toolDictionary(){
+  var w = toolWindow("Dictionary",
+    '<h2>📕 Dictionary</h2>' +
+    '<input id="q" placeholder="Type a word: apple, mango, water, school">' +
+    goButton("🔍 SEARCH", "go()") + '<div id="r"></div>' +
+    '<p style="font-size:12px;color:#888">Words available: ' + Object.keys(DICTIONARY).join(", ") + '</p>');
+  if (!w) return;
+  w.DICT = DICTIONARY;
+  w.document.write('<scr' + 'ipt>var D=' + JSON.stringify(DICTIONARY) + ';' +
+    'function go(){var q=document.getElementById("q").value.trim().toLowerCase();' +
+      'if(!q){return;}document.getElementById("r").innerHTML="<div class=out>"+(D[q]||"Word not found. Try: apple, mango, water, school")+"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- resume --- */
+function toolResume(){
+  var w = toolWindow("Resume Builder",
+    '<h2>📄 Resume Builder</h2>' +
+    field("Full name","n","text","Maheswari") +
+    field("Role / work","r","text","Student") +
+    field("Skills","s","text","Tamil, Maths, Computers") +
+    field("School / college","e","text","Chennai") +
+    '<textarea id="a" style="height:70px" placeholder="About you"></textarea>' +
+    goButton("📄 MAKE RESUME", "make()") + '<div id="res"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function make(){var n=document.getElementById("n").value,r=document.getElementById("r").value,' +
+    's=document.getElementById("s").value,e=document.getElementById("e").value,a=document.getElementById("a").value;' +
+    'var h="<div class=out style=\\"text-align:left\\"><h2 style=\\"text-align:left\\">"+n+"</h2><b>"+r+"</b><br>"+e+"<hr>"' +
+    '<b>Skills:</b> "+s+"<br><br><b>About:</b><br>"+a+"<br><br><span style=\\"color:#888;font-size:12px\\">Made with VIBGYOR</span></div>' +
+    '<br><button onclick=window.print() style=\\"width:100%;padding:12px;border:0;border-radius:10px;background:#8FD0A8;color:#fff;font-weight:900\\">🖨️ PRINT / SAVE PDF</button>' +
+    'document.getElementById("res").innerHTML=h;}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- file converter (image) --- */
+function toolFileConvert(){
+  var w = toolWindow("File Converter",
+    '<h2>🔄 Image Converter</h2>' +
+    '<input type="file" id="f" accept="image/*">' +
+    '<select id="t"><option value="image/png">PNG</option><option value="image/jpeg">JPG</option><option value="image/webp">WEBP</option></select>' +
+    goButton("🔄 CONVERT", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var f=document.getElementById("f").files[0];' +
+    'if(!f){document.getElementById("r").innerHTML="<div class=out>Choose an image first.</div>";return;}' +
+    'var t=document.getElementById("t").value;var img=new Image();var u=URL.createObjectURL(f);' +
+    'img.onload=function(){var c=document.createElement("canvas");c.width=img.naturalWidth;c.height=img.naturalHeight;' +
+      'c.getContext("2d").drawImage(img,0,0);c.toBlob(function(b){var a=document.createElement("a");a.href=URL.createObjectURL(b);' +
+      'a.download="converted."+(t==="image/png"?"png":t==="image/webp"?"webp":"jpg");a.click();' +
+      'document.getElementById("r").innerHTML="<div class=out>✅ Converted and downloaded.</div>";},t,0.92);};img.src=u;}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- size reducer --- */
+function toolReduce(){
+  var w = toolWindow("File Size Reducer",
+    '<h2>📉 Reduce Image Size</h2>' +
+    '<input type="file" id="f" accept="image/*">' +
+    '<b style="font-size:13px">Target size (KB)</b><select id="k"><option>200</option><option>100</option><option>50</option><option selected>20</option></select>' +
+    goButton("📉 COMPRESS", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var f=document.getElementById("f").files[0];' +
+    'if(!f){document.getElementById("r").innerHTML="<div class=out>Choose an image first.</div>";return;}' +
+    'var target=parseInt(document.getElementById("k").value,10);var img=new Image();var u=URL.createObjectURL(f);' +
+    'img.onload=function(){var c=document.createElement("canvas");c.width=img.naturalWidth;c.height=img.naturalHeight;' +
+      'var x=c.getContext("2d");x.drawImage(img,0,0);var q=0.92;' +
+      'while(q>0.05){var d=c.toDataURL("image/jpeg",q);' +
+        'if(d.length*0.75/1024<=target){var a=document.createElement("a");a.href=d;a.download="small.jpg";a.click();' +
+        'document.getElementById("r").innerHTML="<div class=out>✅ About "+Math.round(d.length*0.75/1024)+" KB</div>";return;}q-=0.08;}' +
+      'var dz=c.toDataURL("image/jpeg",0.05);var az=document.createElement("a");az.href=dz;az.download="small.jpg";az.click();' +
+      'document.getElementById("r").innerHTML="<div class=out>Smallest possible: about "+Math.round(dz.length*0.75/1024)+" KB</div>";};img.src=u;}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- PDF maker --- */
+function toolPdfMaker(){
+  var w = toolWindow("PDF Maker",
+    '<h2>📑 PDF Maker</h2>' +
+    '<input id="t" placeholder="Document title" value="My Document">' +
+    '<textarea id="b" style="height:180px" placeholder="Type the text for your PDF"></textarea>' +
+    goButton("📑 MAKE PDF", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var t=document.getElementById("t").value||"Document";var b=document.getElementById("b").value;' +
+    'var p=window.open("","_blank");p.document.write(' +
+    '"<html><head><meta charset=utf-8><title>"+t+"</title>" + ' +
+    '"<style>body{font-family:Arial;padding:40px}h1{color:#B39DDB}pre{white-space:pre-wrap;font-family:inherit;font-size:15px;line-height:1.6}</style></head><body>" + ' +
+    '"<h1>"+t+"</h1><pre>"+b.replace(/[&<>]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c];})+"</pre>" + ' +
+    '"<scr"+"ipt>setTimeout(function(){window.print();},400);<\\/scr"+"ipt></body></html>");' +
+    'p.document.close();}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- QR --- */
+function toolQR(){
+  var w = toolWindow("QR Generator",
+    '<h2>📷 QR Generator</h2>' +
+    '<input id="t" placeholder="Text or link" value="https://razorpay.me/@maheswarisallinone">' +
+    goButton("📷 MAKE QR", "go()") + '<div id="r" style="text-align:center"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var t=document.getElementById("t").value.trim();if(!t)return;' +
+    'document.getElementById("r").innerHTML="<img alt=\\"QR code\\" style=\\"max-width:240px\\" src=\\"https://api.qrserver.com/v1/create-qr-code/?size=240x240&data="+encodeURIComponent(t)+"\\">";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- password --- */
+function toolPassword(){
+  var w = toolWindow("Password Generator",
+    '<h2>🔐 Password Generator</h2>' +
+    '<b style="font-size:13px">Length</b><select id="l"><option>8</option><option selected>12</option><option>16</option><option>20</option></select>' +
+    goButton("🔐 GENERATE", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var n=parseInt(document.getElementById("l").value,10);' +
+    'var c="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%";var p="";' +
+    'for(var i=0;i<n;i++)p+=c.charAt(Math.floor(Math.random()*c.length));' +
+    'document.getElementById("r").innerHTML="<div class=out style=\\"font-size:20px\\">"+p+"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- age --- */
+function toolAge(){
+  var w = toolWindow("Age Calculator",
+    '<h2>🎂 Age Calculator</h2>' + field("Date of birth","d","date") +
+    goButton("🎂 CALCULATE", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var v=document.getElementById("d").value;' +
+    'if(!v){document.getElementById("r").innerHTML="<div class=out>Pick your date of birth.</div>";return;}' +
+    'var b=new Date(v+"T00:00:00"),n=new Date();if(isNaN(b)||b>n){document.getElementById("r").innerHTML="<div class=out>Enter a valid past date.</div>";return;}' +
+    'var y=n.getFullYear()-b.getFullYear();if(n.getMonth()<b.getMonth()||(n.getMonth()===b.getMonth()&&n.getDate()<b.getDate()))y--;' +
+    'var days=Math.floor((n-b)/86400000);' +
+    'document.getElementById("r").innerHTML="<div class=out>"+y+" years<br>"+days.toLocaleString()+" days</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- BMI --- */
+function toolBMI(){
+  var w = toolWindow("BMI Calculator",
+    '<h2>⚖️ BMI Calculator</h2>' + field("Weight (kg)","w","number","50") + field("Height (cm)","h","number","150") +
+    goButton("⚖️ CALCULATE", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var w=parseFloat(document.getElementById("w").value),h=parseFloat(document.getElementById("h").value)/100;' +
+    'if(!(w>0)||!(h>0)){document.getElementById("r").innerHTML="<div class=out>Enter weight and height.</div>";return;}' +
+    'var b=w/(h*h);var band=b<18.5?"Underweight":b<25?"Healthy":b<30?"Overweight":"Obese";' +
+    'document.getElementById("r").innerHTML="<div class=out>BMI "+b.toFixed(1)+"<br>"+band+"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- EMI --- */
+function toolEMI(){
+  var w = toolWindow("EMI Calculator",
+    '<h2>🏦 EMI Calculator</h2>' + field("Loan amount","p","number","100000") + field("Interest % per year","r","number","10") + field("Months","n","number","12") +
+    goButton("🏦 CALCULATE", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var p=parseFloat(document.getElementById("p").value),r=parseFloat(document.getElementById("r").value)/1200,n=parseFloat(document.getElementById("n").value);' +
+    'if(!(p>0)||!(n>0)||r<0){document.getElementById("r").innerHTML="<div class=out>Check your inputs.</div>";return;}' +
+    'var emi=r===0?p/n:p*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);' +
+    'document.getElementById("r").innerHTML="<div class=out>EMI "+emi.toFixed(2)+"<br>Total pay "+Math.round(emi*n).toLocaleString()+"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- GST --- */
+function toolGST(){
+  var w = toolWindow("GST Calculator",
+    '<h2>🧾 GST Calculator</h2>' + field("Amount","a","number","1000") +
+    '<b style="font-size:13px">GST %</b><select id="g"><option>5</option><option>12</option><option selected>18</option><option>28</option></select>' +
+    goButton("🧾 CALCULATE", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var a=parseFloat(document.getElementById("a").value),g=parseFloat(document.getElementById("g").value);' +
+    'if(!isFinite(a)){document.getElementById("r").innerHTML="<div class=out>Enter an amount.</div>";return;}' +
+    'var gst=a*g/100;document.getElementById("r").innerHTML="<div class=out>GST "+gst.toFixed(2)+"<br>Total "+(a+gst).toFixed(2)+"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- discount --- */
+function toolDiscount(){
+  var w = toolWindow("Discount Calculator",
+    '<h2>🏷️ Discount Calculator</h2>' + field("Price","p","number","999") + field("Discount %","d","number","25") +
+    goButton("🏷️ CALCULATE", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var p=parseFloat(document.getElementById("p").value),d=parseFloat(document.getElementById("d").value);' +
+    'if(!isFinite(p)||!isFinite(d)){document.getElementById("r").innerHTML="<div class=out>Enter price and discount.</div>";return;}' +
+    'var pay=p*(1-d/100);document.getElementById("r").innerHTML="<div class=out>Pay "+pay.toFixed(2)+"<br>You save "+(p-pay).toFixed(2)+"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- currency --- */
+function toolCurrency(){
+  var w = toolWindow("Currency Converter",
+    '<h2>💱 Currency Converter</h2>' + field("Amount","a","number","100") +
+    '<b style="font-size:13px">From</b><select id="f"><option>USD</option><option>INR</option><option>EUR</option><option>GBP</option></select>' +
+    '<b style="font-size:13px">To</b><select id="t"><option>INR</option><option>USD</option><option>EUR</option><option>GBP</option></select>' +
+    '<b style="font-size:13px">Rate (1 from = ? to)</b><input id="r" type="number" step="any" value="83">' +
+    goButton("💱 CONVERT", "go()") + '<div id="r"></div>' +
+    '<p style="font-size:12px;color:#888">Type the current rate from your bank or a rate website.</p>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var a=parseFloat(document.getElementById("a").value),r=parseFloat(document.getElementById("r").value),' +
+    'f=document.getElementById("f").value,t=document.getElementById("t").value;' +
+    'if(!isFinite(a)||!isFinite(r)){document.getElementById("r").innerHTML="<div class=out>Enter amount and rate.</div>";return;}' +
+    'document.getElementById("r").innerHTML="<div class=out>"+a+" "+f+" = "+(a*r).toFixed(2)+" "+t+"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- units --- */
+function toolUnits(){
+  var opts = '<option value="m:1">Metre</option><option value="m:1000">Kilometre</option><option value="m:0.01">Centimetre</option>' +
+    '<option value="m:0.3048">Feet</option><option value="m:0.0254">Inch</option>' +
+    '<option value="kg:1">Kilogram</option><option value="kg:0.001">Gram</option><option value="kg:0.45359237">Pound</option>' +
+    '<option value="l:1">Litre</option><option value="l:0.001">Millilitre</option>';
+  var w = toolWindow("Unit Converter",
+    '<h2>📏 Unit Converter</h2>' + field("Value","a","number","1") +
+    '<b style="font-size:13px">From</b><select id="f">' + opts + '</select>' +
+    '<b style="font-size:13px">To</b><select id="t">' + opts + '</select>' +
+    '<b style="font-size:13px">Temperature</b>' +
+    '<select id="tp"><option value="C">Celsius → Fahrenheit</option><option value="F">Fahrenheit → Celsius</option></select>' +
+    goButton("📏 CONVERT", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var a=parseFloat(document.getElementById("a").value);' +
+    'if(!isFinite(a)){document.getElementById("r").innerHTML="<div class=out>Enter a value.</div>";return;}' +
+    'var f=document.getElementById("f"),t=document.getElementById("t");' +
+    'var pf=f.value.split(":"),pt=t.value.split(":");' +
+    'if(pf[0]!==pt[0]){document.getElementById("r").innerHTML="<div class=out>Choose units from the same category.</div>";return;}' +
+    'var v=a*parseFloat(pf[1])/parseFloat(pt[1]);' +
+    'document.getElementById("r").innerHTML="<div class=out>"+a+" "+f.selectedOptions[0].text+" = "+Number(v.toPrecision(8))+" "+t.selectedOptions[0].text+"</div>";' +
+    'temp(a);}' +
+    'function temp(a){var tp=document.getElementById("tp");var out="";' +
+      'if(tp.value==="C")out=" • "+a+" °C = "+(a*9/5+32).toFixed(2)+" °F";else out=" • "+a+" °F = "+((a-32)*5/9).toFixed(2)+" °C";' +
+      'document.getElementById("r").innerHTML+=out;}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- word counter --- */
+function toolWords(){
+  var w = toolWindow("Word Counter",
+    '<h2>🔢 Word Counter</h2>' +
+    '<textarea id="t" style="height:140px" oninput="go()" placeholder="Type or paste text"></textarea>' +
+    '<div class="out" id="r">0 words</div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var t=document.getElementById("t").value;' +
+    'var w=t.trim()?t.trim().split(/\\s+/).length:0;var s=t.trim()?t.trim().split(/[.!?]+/).filter(Boolean).length:0;' +
+    'document.getElementById("r").innerHTML=w+" words • "+t.length+" characters • "+s+" sentences";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- calculator --- */
+function toolCalculator(){
+  var w = toolWindow("Calculator",
+    '<h2>🧮 Calculator</h2>' +
+    '<input id="e" placeholder="Eg: 12*8+5" style="font-size:20px">' +
+    goButton("= CALCULATE", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var e=document.getElementById("e").value;' +
+    'if(!/^[-+*/(). 0-9%]+$/.test(e)){document.getElementById("r").innerHTML="<div class=out>Use numbers and + - * / only.</div>";return;}' +
+    'try{var v=Function("return ("+e+")")();document.getElementById("r").innerHTML="<div class=out style=\\"font-size:22px\\">"+v+"</div>";}' +
+    'catch(x){document.getElementById("r").innerHTML="<div class=out>Check the expression.</div>";}}' +
+    'document.getElementById("e").addEventListener("keydown",function(ev){if(ev.key==="Enter")go();});' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- percentage --- */
+function toolPercent(){
+  var w = toolWindow("Percentage Calculator",
+    '<h2>📊 Percentage</h2>' +
+    '<select id="m"><option value="of">What is X% of Y?</option><option value="what">X is what % of Y?</option><option value="inc">Increase X by Y%</option><option value="dec">Decrease X by Y%</option></select>' +
+    field("X","x","number","20") + field("Y","y","number","200") +
+    goButton("📊 CALCULATE", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var x=parseFloat(document.getElementById("x").value),y=parseFloat(document.getElementById("y").value),' +
+    'm=document.getElementById("m").value;if(!isFinite(x)||!isFinite(y)){document.getElementById("r").innerHTML="<div class=out>Enter both numbers.</div>";return;}' +
+    'var v;if(m==="of")v=x*y/100;else if(m==="what")v=(y?x/y*100:NaN);else if(m==="inc")v=y*(1+x/100);else v=y*(1-x/100);' +
+    'document.getElementById("r").innerHTML="<div class=out>"+ (isFinite(v)?Number(v.toPrecision(8)):"Cannot divide by zero") +"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- love --- */
+function toolLove(){
+  var w = toolWindow("Love Calculator",
+    '<h2>❤️ Love Calculator</h2>' + field("Your name","a","text","") + field("Friend name","b","text","") +
+    goButton("❤️ CALCULATE", "go()") + '<div id="r"></div>' +
+    '<p style="font-size:12px;color:#888">Just for fun.</p>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var a=document.getElementById("a").value||"You",b=document.getElementById("b").value||"Friend";' +
+    'var v=((a.length*7+b.length*11)%100);if(v<45)v+=45;' +
+    'document.getElementById("r").innerHTML="<div class=out style=\\"font-size:18px\\">"+a+" ❤️ "+b+" = "+v+"%</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- joke --- */
+function toolJoke(){
+  var w = toolWindow("Kids Joke", '<h2>😂 Kids Joke</h2>' + goButton("😂 NEW JOKE", "go()") + '<div class="out" id="r">Tap for a joke</div>');
+  if (!w) return;
+  w.JOKES = JOKES;
+  w.document.write('<scr' + 'ipt>var J=' + JSON.stringify(JOKES) + ';function go(){document.getElementById("r").innerText=J[Math.floor(Math.random()*J.length)];}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- motivation --- */
+function toolMotivation(){
+  var w = toolWindow("Motivation", '<h2>💪 Motivation</h2>' + goButton("💪 NEW LINE", "go()") + '<div class="out" id="r">Tap for motivation</div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>var M=' + JSON.stringify(MOTIVATION) + ';function go(){document.getElementById("r").innerText=M[Math.floor(Math.random()*M.length)];}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- lucky number --- */
+function toolLucky(){
+  var w = toolWindow("Lucky Number",
+    '<h2>🍀 Lucky Number</h2>' + field("Your name","n","text","") + field("Highest number","m","number","100") +
+    goButton("🍀 GENERATE", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var m=parseInt(document.getElementById("m").value,10)||100;' +
+    'var n=Math.floor(Math.random()*m)+1;document.getElementById("r").innerHTML="<div class=out style=\\"font-size:26px\\">"+n+"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- name meaning --- */
+function toolNameMeaning(){
+  var w = toolWindow("Name Meaning",
+    '<h2>✨ Name Meaning</h2>' + field("Your name","n","text","") + goButton("✨ SHOW", "go()") + '<div id="r"></div>' +
+    '<p style="font-size:12px;color:#888">Fun letter meaning, not real etymology.</p>');
+  if (!w) return;
+  var meanings = {A:"Ambitious",B:"Bright",C:"Caring",D:"Dependable",E:"Energetic",F:"Friendly",G:"Generous",H:"Honest",I:"Imaginative",J:"Joyful",K:"Kind",L:"Loyal",M:"Magnificent",N:"Nice",O:"Optimistic",P:"Patient",Q:"Quick",R:"Radiant",S:"Sweet",T:"Trustworthy",U:"Unique",V:"Valiant",W:"Wise",X:"eXtra",Y:"Young",Z:"Zesty"};
+  w.MEAN = meanings;
+  w.document.write('<scr' + 'ipt>var M=' + JSON.stringify(meanings) + ';function go(){var n=(document.getElementById("n").value||"Friend").toUpperCase();' +
+    'var h="<div class=out style=\\"text-align:left\\">";for(var i=0;i<n.length;i++){var c=n.charAt(i);h+=c+" - "+(M[c]||"Special")+"<br>";}' +
+    'h+="</div>";document.getElementById("r").innerHTML=h;}' +
+    '<\/scr' + 'ipt>');
+}
+
+
+/* --- horoscope --- */
+function toolHoroscope(){
+  var signs = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capricorn","Aquarius","Pisces"];
+  var texts = ["A good day to start something new.","Stay patient, good news is near.","Help a friend today.","Your hard work will be noticed.","Rest well and smile.","A small surprise is coming."];
+  var w = toolWindow("Horoscope",
+    '<h2>🔮 Horoscope</h2><b style="font-size:13px">Your sign</b><select id="s">' + signs.map(function(s){ return "<option>" + s + "</option>"; }).join("") + '</select>' +
+    goButton("🔮 SHOW", "go()") + '<div id="r"></div><p style="font-size:12px;color:#888">For fun only.</p>');
+  if (!w) return;
+  w.HORO = texts;
+  w.document.write('<scr' + 'ipt>var T=' + JSON.stringify(texts) + ';function go(){var s=document.getElementById("s").value;' +
+    'document.getElementById("r").innerHTML="<div class=out><b>"+s+"</b><br>"+T[Math.floor(Math.random()*T.length)]+"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- toss --- */
+function toolToss(){
+  var w = toolWindow("Coin Toss", '<h2>🪙 Coin Toss</h2>' + goButton("🪙 TOSS", "go()") + '<div class="out" id="r" style="font-size:26px">Tap to toss</div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){document.getElementById("r").innerText=Math.random()<0.5?"HEADS":"TAILS";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- bill splitter --- */
+function toolBill(){
+  var w = toolWindow("Bill Splitter",
+    '<h2>💸 Bill Splitter</h2>' + field("Bill amount","a","number","1000") + field("Number of people","p","number","4") +
+    goButton("💸 SPLIT", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var a=parseFloat(document.getElementById("a").value),p=parseInt(document.getElementById("p").value,10);' +
+    'if(!(a>0)||!(p>0)){document.getElementById("r").innerHTML="<div class=out>Enter bill and people.</div>";return;}' +
+    'document.getElementById("r").innerHTML="<div class=out>Each pays "+(a/p).toFixed(2)+"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- tip --- */
+function toolTip(){
+  var w = toolWindow("Tip Calculator",
+    '<h2>💰 Tip Calculator</h2>' + field("Bill amount","a","number","1000") + field("Tip %","t","number","10") +
+    goButton("💰 CALCULATE", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var a=parseFloat(document.getElementById("a").value),t=parseFloat(document.getElementById("t").value);' +
+    'if(!isFinite(a)||!isFinite(t)){document.getElementById("r").innerHTML="<div class=out>Enter bill and tip.</div>";return;}' +
+    'var tip=a*t/100;document.getElementById("r").innerHTML="<div class=out>Tip "+tip.toFixed(2)+"<br>Total "+(a+tip).toFixed(2)+"</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- days --- */
+function toolDays(){
+  var w = toolWindow("Days Calculator",
+    '<h2>📅 Days Between Dates</h2>' + field("First date","a","date") + field("Second date","b","date") +
+    goButton("📅 COUNT", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function go(){var a=document.getElementById("a").value,b=document.getElementById("b").value;' +
+    'if(!a||!b){document.getElementById("r").innerHTML="<div class=out>Pick both dates.</div>";return;}' +
+    'var d=Math.round(Math.abs(new Date(b)-new Date(a))/86400000);' +
+    'document.getElementById("r").innerHTML="<div class=out>"+d.toLocaleString()+" days<br>"+(d/7).toFixed(1)+" weeks</div>";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- stopwatch --- */
+function toolStopwatch(){
+  var w = toolWindow("Stopwatch",
+    '<h2>⏱️ Stopwatch</h2><div class="out" id="r" style="font-size:40px;text-align:center">0.0 s</div>' +
+    '<div class="grid"><button style="padding:14px;border:0;border-radius:12px;background:#8FD0A8;color:#fff;font-weight:900" onclick="start()">START</button>' +
+    '<button style="padding:14px;border:0;border-radius:12px;background:#F49AA8;color:#fff;font-weight:900" onclick="reset()">RESET</button></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>var t0=0,iv=null;function start(){if(iv)return;t0=Date.now();' +
+    'iv=setInterval(function(){document.getElementById("r").innerText=((Date.now()-t0)/1000).toFixed(1)+" s";},100);}' +
+    'function reset(){clearInterval(iv);iv=null;document.getElementById("r").innerText="0.0 s";}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- notes --- */
+function toolNotes(){
+  var w = toolWindow("Notes",
+    '<h2>📝 Notes</h2>' +
+    '<textarea id="t" style="height:200px" placeholder="Write your notes"></textarea>' +
+    goButton("💾 SAVE", "save()") + '<div class="out" id="r"></div>' +
+    '<p style="font-size:12px;color:#888">Saved only in this browser.</p>');
+  if (!w) return;
+  w.document.getElementById("t").value = read("vibgyor_notes") || "";
+  w.saveNotes = function(){
+    store("vibgyor_notes", w.document.getElementById("t").value);
+    w.document.getElementById("r").innerText = "✅ Saved";
+  };
+  w.document.write('<scr' + 'ipt>function save(){window.saveNotes();}<\/scr' + 'ipt>');
+}
+
+/* --- todo --- */
+function toolTodo(){
+  var w = toolWindow("To Do List",
+    '<h2>✅ To Do</h2><input id="t" placeholder="Add a task">' +
+    goButton("➕ ADD", "add()") + '<div id="r"></div>');
+  if (!w) return;
+  w.renderTodos = function(){
+    var list = JSON.parse(read("vibgyor_todo") || "[]");
+    w.document.getElementById("r").innerHTML = list.length
+      ? list.map(function(t, i){
+          return '<div style="display:flex;gap:8px;align-items:center;margin:6px 0">' +
+            '<span style="flex:1">' + esc(t) + '</span>' +
+            '<button onclick="del(' + i + ')" style="padding:6px 10px;border:0;border-radius:8px;background:#F49AA8;color:#fff">✖</button></div>';
+        }).join("")
+      : '<p class="small" style="font-size:12px;color:#888">No tasks yet.</p>';
+  };
+  w.addTodo = function(){
+    var v = w.document.getElementById("t").value.trim();
+    if (!v) return;
+    var list = JSON.parse(read("vibgyor_todo") || "[]");
+    list.push(v);
+    store("vibgyor_todo", JSON.stringify(list));
+    w.document.getElementById("t").value = "";
+    w.renderTodos();
+  };
+  w.delTodo = function(i){
+    var list = JSON.parse(read("vibgyor_todo") || "[]");
+    list.splice(i, 1);
+    store("vibgyor_todo", JSON.stringify(list));
+    w.renderTodos();
+  };
+  w.renderTodos();
+  w.document.write('<scr' + 'ipt>function add(){window.addTodo();}function del(i){window.delTodo(i);}<\/scr' + 'ipt>');
+}
+
+/* --- expense --- */
+function toolExpense(){
+  var w = toolWindow("Expense Tracker",
+    '<h2>💳 Expense Tracker</h2>' +
+    field("Amount","a","number","") + field("What for","d","text","") +
+    goButton("➕ ADD EXPENSE", "add()") + '<div id="r"></div>' +
+    '<div id="list"></div>' +
+    '<p style="font-size:12px;color:#888">Saved only in this browser.</p>');
+  if (!w) return;
+  w.renderExp = function(){
+    var list = JSON.parse(read("vibgyor_expense") || "[]");
+    var total = list.reduce(function(s, x){ return s + (parseFloat(x.a) || 0); }, 0);
+    w.document.getElementById("r").innerHTML = "<div class=out>Total spent: " + total.toFixed(2) + "</div>";
+    w.document.getElementById("list").innerHTML = list.slice().reverse().map(function(x){
+      return '<div style="border-bottom:1px solid #eee;padding:6px 0;font-size:13px">' + esc(x.d || "Expense") + " - " + x.a + "</div>";
+    }).join("");
+  };
+  w.addExp = function(){
+    var a = w.document.getElementById("a").value;
+    var d = w.document.getElementById("d").value;
+    if (!a) return;
+    var list = JSON.parse(read("vibgyor_expense") || "[]");
+    list.push({ a: a, d: d });
+    store("vibgyor_expense", JSON.stringify(list));
+    w.document.getElementById("a").value = "";
+    w.document.getElementById("d").value = "";
+    w.renderExp();
+  };
+  w.renderExp();
+  w.document.write('<scr' + 'ipt>function add(){window.addExp();}<\/scr' + 'ipt>');
+}
+
+/* --- feedback tool --- */
+function toolFeedback(){
+  var w = toolWindow("Feedback",
+    '<h2>⭐ Feedback</h2>' + field("Your name","n","text","") +
+    '<textarea id="m" style="height:90px" placeholder="Your suggestion"></textarea>' +
+    goButton("⭐ SEND", "send()") + '<div id="r"></div>');
+  if (!w) return;
+  w.sendFeedback = function(){
+    var n = w.document.getElementById("n").value.trim();
+    var m = w.document.getElementById("m").value.trim();
+    if (!m) { w.document.getElementById("r").innerText = "Please write a suggestion."; return; }
+    var all = JSON.parse(read("vibgyor_feedback") || "[]");
+    all.push({ name: n || "Friend", plan: read("vibgyor_plan") || "Not yet", rating: "", tool: "", newTool: "", msg: m, date: new Date().toLocaleString("en-IN") });
+    store("vibgyor_feedback", JSON.stringify(all));
+    w.document.getElementById("r").innerText = "🙏 Thank you!";
+    updateFbCount();
+  };
+  w.document.write('<scr' + 'ipt>function send(){window.sendFeedback();}<\/scr' + 'ipt>');
+}
+
+/* --- visiting card --- */
+function toolCard(){
+  var w = toolWindow("Visiting Card Maker",
+    '<h2>💳 Visiting Card - 8 Lines</h2>' +
+    field("1 Name","a","text","Maheswari") +
+    field("2 Business","b","text","VIBGYOR - 41 Tools") +
+    field("3 Phone","c","text","") +
+    field("4 Place","d","text","Chennai, Tamil Nadu") +
+    field("5 Service 1","e","text","Moral stories, MCQ, PDF to quiz") +
+    field("6 Service 2","f","text","HTML, Python, QR, calculators") +
+    field("7 Pricing","g","text","₹399 / month") +
+    field("8 Tagline","h","text","100% kids safe") +
+    goButton("💳 MAKE CARD", "go()") + '<div id="r"></div>');
+  if (!w) return;
+  w.document.write('<scr' + 'ipt>function v(id){return document.getElementById(id).value;}' +
+    'function go(){var card="<div style=\\"background:#fff;border:2px solid #E8DFF5;border-radius:16px;padding:18px;text-align:center\\">' +
+      '"<div style=\\"font-size:28px;font-weight:900\\"><span style=color:#B39DDB>V</span><span style=color:#9DB4D6>I</span><span style=color:#8FC1E3>B</span><span style=color:#8FD0A8>G</span><span style=color:#D9B64A>Y</span><span style=color:#F5B895>O</span><span style=color:#F49AA8>R</span> 🌈</div>"' +
+      '"<div style=\\"font-size:20px;font-weight:900\\">"+v("a")+"</div><div style=color:#8FC1E3;font-weight:700>"+v("b")+"</div><hr>"' +
+      '"<div style=\\"text-align:left;line-height:1.9;font-size:14px\\">📞 "+v("c")+"<br>📍 "+v("d")+"<br>✨ "+v("e")+"<br>✨ "+v("f")+"<br>💰 "+v("g")+"<br>⭐ "+v("h")+"</div></div>"' +
+      '"<br><button onclick=window.print() style=\\"width:100%;padding:12px;border:0;border-radius:10px;background:#8FD0A8;color:#fff;font-weight:900\\">🖨️ PRINT CARD</button>";' +
+    'document.getElementById("r").innerHTML=card;}' +
+    '<\/scr' + 'ipt>');
+}
+
+/* --- certificate --- */
+function openCertificate(){
+  var w = window.open("", "_blank", "width=700,height=800");
+  if (!w) { alert("Please allow pop-ups."); return; }
+  w.document.write(
+    '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Certificate</title>' +
+    '<style>body{margin:0;padding:12px;font-family:Arial;text-align:center;background:#FFFDF8;color:#5A5A5A}' +
+    '.tb{background:#5A5A5A;color:#fff;padding:10px;border-radius:10px}' +
+    '.tb button{padding:10px 16px;border:0;border-radius:10px;font-weight:900;margin:3px}' +
+    '.c{background:#fff;border:6px solid #F2D492;border-radius:20px;padding:26px;margin-top:12px}' +
+    '@media print{.tb{display:none}}</style></head><body>' +
+    '<div class="tb"><button onclick="window.print()" style="background:#8FD0A8;color:#fff">🖨️ PRINT</button>' +
+    '<button onclick="window.close()" style="background:#F49AA8;color:#fff">❌ CLOSE</button></div>' +
+    '<div class="c"><div style="font-size:48px">🌈</div>' +
+    '<h1>CHILD SAFE CERTIFICATE</h1>' +
+    '<h2 style="color:#B39DDB">VIBGYOR - 41 Tools</h2>' +
+    '<div style="font-size:17px;line-height:2;text-align:left;display:inline-block">' +
+    '✅ 100% kids safe<br>✅ No bad words<br>✅ Good moral stories<br>✅ Happy endings<br>✅ Suitable for age 5+</div>' +
+    '<p><b>By Maheswari</b><br>Chennai, Tamil Nadu<br>' + new Date().toLocaleDateString("en-IN") + '</p></div>' +
+    '</body></html>'
+  );
+  w.document.close();
+}
+
+/* --- generic --- */
+function toolGeneric(name){
+  toolWindow(name, '<h2>' + esc(name) + '</h2><p>This tool is listed for the full 41-tool pack.</p>');
+}
+
+/* ============================ WORKING TAB ============================ */
+var WORKING = ["Moral Story","MCQ","GK Quiz","Calculator","Percentage Calculator","Age Calculator","BMI Calculator",
+  "EMI Calculator","GST Calculator","Discount Calculator","Unit Converter","Currency Converter","Word Counter",
+  "Days Calculator","Bill Splitter","Tip Calculator","Stopwatch","Notes","ToDo","Expense Tracker","QR Generator",
+  "Password Generator","Translate","Dictionary","HTML Coding","Python Coding","PDF To Quiz","PDF Maker",
+  "File Converter","File Size Reducer","Resume Builder","Visiting Card Maker","Joke","Motivation","Love Calculator",
+  "Lucky Number","Name Meaning","Horoscope","Toss","Certificate","Feedback"];
+
+function renderWorking(){
+  var grid = document.getElementById("workingGrid");
+  grid.innerHTML = WORKING.map(function(n, i){
+    return '<button onclick="openTool(' + JSON.stringify(n) + ')">' + (i + 1) + '. ' + esc(n) + ' 🪟</button>';
+  }).join("");
+}
+
+/* ============================ START ============================ */
+renderWorking();
+refreshPlanBar();
+updateFbCount();
+loadEntitlement();
+showTab(1);
+setInterval(refreshPlanBar, 60000);
+</script>
+</body>
+</html>

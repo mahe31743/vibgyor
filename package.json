@@ -1,0 +1,11 @@
+{
+  "name": "vibgyor-education",
+  "version": "29.0.0",
+  "private": true,
+  "type": "module",
+  "description": "VIBGYOR Education - 42 tools with Razorpay subscriptions",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  }
+}
